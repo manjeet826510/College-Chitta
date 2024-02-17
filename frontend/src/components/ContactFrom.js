@@ -16,14 +16,14 @@ const ContactForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/api/contact/send-email', formData);
+      await axios.post('/api/contact/send-email', formData);
       alert('Email sent successfully!');
     } catch (error) {
       console.error('Error sending email:', error);
       alert('Failed to send email. Please try again later.');
     }
     try {
-      await axios.post('http://localhost:5000/api/contact/save-details', formData);
+      await axios.post('/api/contact/save-details', formData);
       alert('Details saved in Database successfully!');
     } catch (error) {
       console.error('Error sending email:', error);
